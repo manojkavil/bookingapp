@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HappierLiving.Appointment.Entities\HappierLiving.Appointment.Entity.csproj" />
+    <ProjectReference Include="..\HappierLiving.Appointment.Repository\HappierLiving.Appointment.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
