@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace HappierLiving.Appointment.Web
 {
@@ -59,6 +60,7 @@ namespace HappierLiving.Appointment.Web
                 // see https://go.microsoft.com/fwlink/?linkid=864501
 
                 spa.Options.SourcePath = "ClientApp";
+                spa.Options.StartupTimeout = TimeSpan.FromSeconds(200);
 
                 if (env.IsDevelopment())
                 {
