@@ -3,6 +3,7 @@ import { AUTH_CONFIG } from './auth0-variables';
 import { Router } from '@angular/router';
 import 'rxjs/add/operator/filter';
 import * as auth0 from 'auth0-js';
+import { environment } from '../../environments/environment';
 
 (window as any).global = window;
 
@@ -23,14 +24,15 @@ export class AuthService {
   constructor(public router: Router) {}
 
   public login(): void {
-    this.auth0.authorize();
+     this.auth0.authorize();
   }
 
   public handleAuthentication(): void {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
+        window.location.hash = '';
         this.setSession(authResult);
-        this.router.navigate(['/home']);
+        this.router.navigate(['/fetch-data']);
       } else if (err) {
         this.router.navigate(['/home']);
         console.log(err);
@@ -63,19 +65,26 @@ export class AuthService {
   }
 
   public logout(): void {
+    debugger;    
     // Remove tokens and expiry time from localStorage
     localStorage.removeItem('access_token');
     localStorage.removeItem('id_token');
     localStorage.removeItem('expires_at');
     // Go back to the home route
-    this.router.navigate(['/']);
+    this.auth0.logout({
+      returnTo: environment.dev.clientUrl,
+      clientID: AUTH_CONFIG.clientID
+    });
+    
   }
 
   public isAuthenticated(): boolean {
     // Check whether the current time is past the
     // access token's expiry time
+    
     const expiresAt = JSON.parse(localStorage.getItem('expires_at') || '{}');
     return new Date().getTime() < expiresAt;
+    
   }
 
 }

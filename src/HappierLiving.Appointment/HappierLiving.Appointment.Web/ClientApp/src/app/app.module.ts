@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CallbackComponent } from './callback/callback.component';
+import { ROUTES } from './app.routes';
 
 
 @NgModule({
@@ -27,13 +28,7 @@ import { CallbackComponent } from './callback/callback.component';
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'callback', component: CallbackComponent },
-      
-    ])
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

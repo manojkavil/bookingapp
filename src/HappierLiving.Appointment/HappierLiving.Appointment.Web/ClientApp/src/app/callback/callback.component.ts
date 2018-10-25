@@ -11,8 +11,7 @@ export class CallbackComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    this.router.navigate([`./fetch-data`]);
-    
+       
   }
 
 }
