@@ -19,6 +19,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{437A891C-3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HappierLiving.Appointment.Repository.Tests", "HappierLiving.Appointment.Repository.Tests\HappierLiving.Appointment.Repository.Tests.csproj", "{D1191333-D337-4047-A7C1-C0E8B3B65A17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappierLiving.Appointment.QueueService", "HappierLiving.Appointment.QueueService\HappierLiving.Appointment.QueueService.csproj", "{1BCA7949-E371-4499-BDA6-6CB9458179BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappierLiving.Appointment.WebJob", "HappierLiving.Appointment.WebJob\HappierLiving.Appointment.WebJob.csproj", "{8E3B82B5-FA25-4B32-9A9E-A531A4E5ED03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +57,14 @@ Global
 		{D1191333-D337-4047-A7C1-C0E8B3B65A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1191333-D337-4047-A7C1-C0E8B3B65A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1191333-D337-4047-A7C1-C0E8B3B65A17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BCA7949-E371-4499-BDA6-6CB9458179BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BCA7949-E371-4499-BDA6-6CB9458179BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BCA7949-E371-4499-BDA6-6CB9458179BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BCA7949-E371-4499-BDA6-6CB9458179BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E3B82B5-FA25-4B32-9A9E-A531A4E5ED03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E3B82B5-FA25-4B32-9A9E-A531A4E5ED03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E3B82B5-FA25-4B32-9A9E-A531A4E5ED03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E3B82B5-FA25-4B32-9A9E-A531A4E5ED03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
