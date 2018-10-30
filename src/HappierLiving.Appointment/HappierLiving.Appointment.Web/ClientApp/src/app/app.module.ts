@@ -13,6 +13,9 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CallbackComponent } from './callback/callback.component';
 import { ROUTES } from './app.routes';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ApiService } from './shared/services/api.service';
+import { ForgotPasswordService } from './forgot-password/forgot-password.service';
 
 
 @NgModule({
@@ -22,15 +25,17 @@ import { ROUTES } from './app.routes';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    CallbackComponent
+    CallbackComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+  
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [AuthService],
+  providers: [AuthService, ApiService, ForgotPasswordService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

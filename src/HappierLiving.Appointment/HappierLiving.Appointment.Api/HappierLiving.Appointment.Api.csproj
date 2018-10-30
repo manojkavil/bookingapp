@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HappierLiving.Appointment.Models\HappierLiving.Appointment.Model.csproj" />
     <ProjectReference Include="..\HappierLiving.Appointment.Services\HappierLiving.Appointment.Service.csproj" />
   </ItemGroup>
 
